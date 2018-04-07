@@ -15,3 +15,9 @@ git clone https://github.com/jorgeperez99/jasmineExample.git
 4. Navigate to the directory that was created
 ```
 cd <directory name>
+```
+5. install dependencies.
+```
+ng init
+```
+6. you will need to copy and paste the 
