@@ -40,3 +40,9 @@ export const environment = {
   }
 };
 ```
+## Deployment
+1. build `ng build --prod`
+2. change environment to prod
+```
+Import { environment } from ‘../environments.prod’
+```
