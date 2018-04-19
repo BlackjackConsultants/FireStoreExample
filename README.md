@@ -20,4 +20,29 @@ cd <directory name>
 ```
 ng init
 ```
-6. you will need to copy and paste the 
+6. ignored environment settings in .git that way private info is not shown
+```
+#environment settings
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+```
+7. make sure to add your applications firebase settings in both the `environment.ts` and `environment.prod.ts`
+```
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: "xxx",
+    authDomain: "xxx",
+    databaseURL: "xxx",
+    projectId: "xxx",
+    storageBucket: "xxx",
+    messagingSenderId: "xxx"
+  }
+};
+```
+## Deployment
+1. build `ng build --prod`
+2. change environment to prod
+```
+Import { environment } from ‘../environments.prod’
+```
