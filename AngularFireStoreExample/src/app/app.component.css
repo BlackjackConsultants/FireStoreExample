@@ -1,0 +1,13 @@
+.parent {
+  height: 100%;
+  width: 100%;
+}
+
+.left-child {
+  background-color: #f5f3f3;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.right-child {
+}

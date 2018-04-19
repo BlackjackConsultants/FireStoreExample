@@ -1,5 +1,17 @@
-<app-navbar></app-navbar>
-<div class="container">
-  <app-add-item></app-add-item>
-  <app-items></app-items>
+<div class="parent" fxLayout="row">
+  <div fxFlex="15%" class="left-child">
+    <h3 style="margin-top: 0">AngularFireStore Examples</h3>
+    <ul>
+      <li><a routerLink="/column">items</a></li>
+      <li><a routerLink="/queries">queries</a></li>
+      <li><a routerLink="/updates">updates</a></li>
+      <li><a routerLink="/insert">insert</a></li>
+      <li><a routerLink="/delete">delete</a></li>
+    </ul>
+  </div>
+  <div fxFlex class="right-child">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
+
