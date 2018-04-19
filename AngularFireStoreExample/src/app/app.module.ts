@@ -14,6 +14,7 @@ import { ItemService } from './services/item.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { HomeComponent } from './components/home/home.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
-    AngularFirestoreModule, AppRoutingModule
+    AngularFirestoreModule, AppRoutingModule,
+    FlexLayoutModule
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]
