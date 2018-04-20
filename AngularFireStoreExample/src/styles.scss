@@ -1,0 +1,32 @@
+/*
+    styles.css
+*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Segoe UI'
+}
+
+h3 {
+    font-size: large !important;
+    font-weight: bold !important;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc !important;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px !important;
+    box-sizing: unset !important;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style-type: disc !important;
+}
