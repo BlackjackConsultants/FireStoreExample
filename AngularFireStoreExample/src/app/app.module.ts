@@ -13,8 +13,9 @@ import { ItemsComponent } from './components/items/items.component';
 import { ItemService } from './services/item.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
-import { HomeComponent } from './components/home/home.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { ItemsViewComponent } from './components/items-view/items-view.component';
+import { QueriesComponent } from './components/queries/queries.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     ItemsComponent,
     NavbarComponent,
     AddItemComponent,
-    HomeComponent
+    ItemsViewComponent,
+    QueriesComponent
   ],
   imports: [
     BrowserModule,

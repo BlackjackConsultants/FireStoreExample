@@ -106,6 +106,10 @@
     <Content Include="package.json" />
     <Content Include="src\app\components\home\home.component.css" />
     <Content Include="src\app\components\home\home.component.html" />
+    <Content Include="src\app\components\items-view\items-view.component.css" />
+    <Content Include="src\app\components\items-view\items-view.component.html" />
+    <Content Include="src\app\components\queries\queries.component.css" />
+    <Content Include="src\app\components\queries\queries.component.html" />
     <Content Include="src\styles.css">
       <DependentUpon>styles.scss</DependentUpon>
     </Content>
@@ -164,6 +168,10 @@
     <TypeScriptCompile Include="src\app\components\items\items.component.ts" />
     <TypeScriptCompile Include="src\app\components\navbar\navbar.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.ts" />
+    <TypeScriptCompile Include="src\app\components\queries\queries.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\components\queries\queries.component.ts" />
     <TypeScriptCompile Include="src\app\models\Item.ts" />
     <TypeScriptCompile Include="src\app\services\item.service.spec.ts" />
     <TypeScriptCompile Include="src\app\services\item.service.ts" />
