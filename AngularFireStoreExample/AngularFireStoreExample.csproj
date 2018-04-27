@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -164,15 +165,18 @@
     <TypeScriptCompile Include="src\app\components\add-item\add-item.component.ts" />
     <TypeScriptCompile Include="src\app\components\home\home.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.ts" />
     <TypeScriptCompile Include="src\app\components\items\items.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\items\items.component.ts" />
     <TypeScriptCompile Include="src\app\components\navbar\navbar.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\navbar\navbar.component.ts" />
-    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\components\items-view\items-view.component.ts" />
     <TypeScriptCompile Include="src\app\components\queries\queries.component.spec.ts" />
     <TypeScriptCompile Include="src\app\components\queries\queries.component.ts" />
+    <TypeScriptCompile Include="src\app\models\Contact.ts" />
     <TypeScriptCompile Include="src\app\models\Item.ts" />
+    <TypeScriptCompile Include="src\app\services\contact.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\contact.service.ts" />
     <TypeScriptCompile Include="src\app\services\item.service.spec.ts" />
     <TypeScriptCompile Include="src\app\services\item.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />

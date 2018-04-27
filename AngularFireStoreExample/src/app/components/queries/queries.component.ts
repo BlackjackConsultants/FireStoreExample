@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemService } from '../../services/item.service';
-import { Item } from '../../models/Item';
+import { ContactService } from '../../services/contact.service';
+import { Contact } from '../../models/Contact';
 
 @Component({
   selector: 'app-queries',
@@ -8,18 +8,15 @@ import { Item } from '../../models/Item';
   styleUrls: ['./queries.component.css']
 })
 export class QueriesComponent implements OnInit {
-  items: Item[];
+  contacts: Contact[];
 
-  constructor(private itemService: ItemService) { }
+  constructor(private contactService: ContactService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onQueriesClick() {
-    this.itemService.getItems().subscribe(items => {
-      //console.log(items);
-      this.items = items;
+    this.contactService.getContacts().subscribe(contacts => {
+      this.contacts = contacts;
     });
   }
-
 }

@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { ItemsComponent } from './components/items/items.component';
 
 import { ItemService } from './services/item.service';
+import { ContactService } from './services/contact.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -33,7 +34,7 @@ import { QueriesComponent } from './components/queries/queries.component';
     AngularFirestoreModule, AppRoutingModule,
     FlexLayoutModule
   ],
-  providers: [ItemService],
+  providers: [ItemService, ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
