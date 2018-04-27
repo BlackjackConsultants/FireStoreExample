@@ -5,14 +5,14 @@ import { Contact } from '../models/Contact';
 
 @Injectable()
 export class ContactService {
-  contactsCollection: AngularFirestoreCollection<Contact>;
+  contactsCollectionRef: AngularFirestoreCollection<Contact>;
   contacts: Observable<Contact[]>;
   contactDoc: AngularFirestoreDocument<Contact>;
 
   constructor(public afs: AngularFirestore) { 
-    this.contactsCollection = this.afs.collection('contacts', ref => ref.orderBy('FirstName','asc'));
+    this.contactsCollectionRef = this.afs.collection('contacts', ref => ref.orderBy('FirstName','asc'));
 
-    this.contacts = this.contactsCollection.snapshotChanges().map((changes => {
+    this.contacts = this.contactsCollectionRef.snapshotChanges().map((changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Contact;
         data.id = a.payload.doc.id;
@@ -26,7 +26,7 @@ export class ContactService {
   }
 
   addContact(contact: Contact){
-    this.contactsCollection.add(contact);
+    this.contactsCollectionRef.add(contact);
   }
 
   deleteContact(contact: Contact){
