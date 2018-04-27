@@ -14,13 +14,13 @@ export class ItemService {
 
     this.itemsCollection = this.afs.collection('items', ref => ref.orderBy('title','asc'));
 
-    this.items = this.itemsCollection.snapshotChanges().map(changes => {
+    this.items = this.itemsCollection.snapshotChanges().map((changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Item;
         data.id = a.payload.doc.id;
         return data;
       });
-    });
+    }) as any);
   }
 
   getItems(){
