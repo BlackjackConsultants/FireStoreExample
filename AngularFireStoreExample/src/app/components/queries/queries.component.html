@@ -1,8 +1,11 @@
 <div>
-  <ul><li><button (click)="onQueriesClick()">Get All Items</button></li></ul>
   <ul>
-    <li *ngFor="let item of items">
-      {{ item.title }}
+    <li><button (click)="onQueriesClick()">Get All Contacts</button></li>
+    <li><button (click)="onMaleContactsQueryClick()">Get Male Contacts</button></li>
+  </ul>
+  <ul>
+    <li *ngFor="let contact of contacts">
+      {{ contact.FirstName }}
     </li>
   </ul>
 

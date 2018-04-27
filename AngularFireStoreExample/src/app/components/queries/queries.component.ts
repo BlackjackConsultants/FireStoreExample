@@ -19,4 +19,10 @@ export class QueriesComponent implements OnInit {
       this.contacts = contacts;
     });
   }
+
+  onMaleContactsQueryClick() {
+    this.contactService.getContacts().subscribe(contacts => {
+      this.contacts = contacts;
+    });
+  }
 }
