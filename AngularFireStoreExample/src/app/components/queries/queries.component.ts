@@ -23,7 +23,7 @@ export class QueriesComponent implements OnInit {
   }
 
   onMaleContactsQueryClick() {
-    let query = ref => ref.orderBy('FirstName', 'asc')
+    let query = ref => ref.where('Gender', '==', 'm');
     this.contactService.getContacts(query).subscribe(contacts => {
       this.contacts = contacts;
     });
