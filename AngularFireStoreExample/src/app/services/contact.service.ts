@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, QueryFn } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Contact } from '../models/Contact';
 
@@ -9,11 +9,10 @@ export class ContactService {
   contacts: Observable<Contact[]>;
   contactDoc: AngularFirestoreDocument<Contact>;
 
-  constructor(public afs: AngularFirestore) { 
-  }
+  constructor(public afs: AngularFirestore) {}
 
-  getContacts(){
-    this.contactsCollectionRef = this.afs.collection('contacts', ref => ref.orderBy('FirstName','asc'));
+  getContacts(ref?: QueryFn){
+    this.contactsCollectionRef = (ref) ? this.afs.collection('contacts', ref) : this.afs.collection('contacts');
 
     this.contacts = this.contactsCollectionRef.snapshotChanges().map((changes => {
       return changes.map(a => {

@@ -1,0 +1,8 @@
+/*queries.component*/
+.queries-container, .queries-container-item {
+  width: 100%;
+}
+
+.button-list-item {
+  float: left;
+}
