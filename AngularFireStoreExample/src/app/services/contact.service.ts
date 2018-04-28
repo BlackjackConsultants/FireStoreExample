@@ -10,6 +10,9 @@ export class ContactService {
   contactDoc: AngularFirestoreDocument<Contact>;
 
   constructor(public afs: AngularFirestore) { 
+  }
+
+  getContacts(){
     this.contactsCollectionRef = this.afs.collection('contacts', ref => ref.orderBy('FirstName','asc'));
 
     this.contacts = this.contactsCollectionRef.snapshotChanges().map((changes => {
@@ -19,9 +22,6 @@ export class ContactService {
         return data;
       });
     }) as any);
-  }
-
-  getContacts(){
     return this.contacts;
   }
 
