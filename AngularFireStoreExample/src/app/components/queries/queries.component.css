@@ -1,8 +1,17 @@
 /*queries.component*/
-.queries-container, .queries-container-item {
+.queries-container {
   width: 100%;
+  background-color:yellow;
+}
+.queries-button-item {
+  width: 100%;
+  background-color: orange;
+}
+.queries-result-item {
+  width: 100%;
+  background-color: greenyellow;
 }
 
-.button-list-item {
+/*.button-list-item {
   float: left;
-}
+}*/

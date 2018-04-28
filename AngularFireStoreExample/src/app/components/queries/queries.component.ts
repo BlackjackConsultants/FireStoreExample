@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
 import { Contact } from '../../models/Contact';
 import { QueryFn } from 'angularfire2/firestore';
@@ -6,7 +6,8 @@ import { QueryFn } from 'angularfire2/firestore';
 @Component({
   selector: 'app-queries',
   templateUrl: './queries.component.html',
-  styleUrls: ['./queries.component.css']
+  styleUrls: ['./queries.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class QueriesComponent implements OnInit {
   contacts: Contact[];

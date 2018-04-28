@@ -1,12 +1,12 @@
 <div class="queries-container">
-  <div class="queries-container-item">
+  <div class="queries-button-item">
     <ul class="button-list">
-      <li><ul class="button-list-item"><li><button (click)="onQueriesClick()">Get All Contacts</button></li><li>query with no param</li></ul></li>
-      <li><ul class="button-list-item"><li><button (click)="onOrderByContactFNQueryClick()">Sort Contacts By FirstName</button></li><li>use orderby</li></ul></li>
-      <li><ul class="button-list-item"><li><button (click)="onMaleContactsQueryClick()">Get Male Contacts</button></li><li>use where</li></ul></li>
+      <li><span><button (click)="onQueriesClick()">Get All Contacts</button></span><span>query with no param</span></li>
+      <li><span><button (click)="onOrderByContactFNQueryClick()">Sort Contacts By FirstName</button></span><span>use orderby</span></li>
+      <li><span><button (click)="onMaleContactsQueryClick()">Get Male Contacts</button></span><span>use where</span></li>
     </ul>
   </div>
-  <div class="queries-container-item">
+  <div class="queries-result-item">
     <ul>
       <li *ngFor="let contact of contacts">
         {{ contact.FirstName }}st
