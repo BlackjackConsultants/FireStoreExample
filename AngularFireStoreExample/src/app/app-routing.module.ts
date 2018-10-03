@@ -7,7 +7,8 @@ import { QueriesComponent } from './components/queries/queries.component';
 const routes: Routes = [
   { path: '', redirectTo: 'items', pathMatch: 'full' },
   { path: 'queries', component: QueriesComponent },
-  { path: 'items', component: ItemsViewComponent }
+  { path: 'items', component: ItemsViewComponent },
+  { path: 'update', component: ItemsViewComponent }
 ];
 
 @NgModule({

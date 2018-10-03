@@ -1,6 +1,8 @@
+
+import {map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, QueryFn } from 'angularfire2/firestore';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Contact } from '../models/Contact';
 
 @Injectable()
@@ -14,13 +16,13 @@ export class ContactService {
   getContacts(ref?: QueryFn){
     this.contactsCollectionRef = (ref) ? this.afs.collection('contacts', ref) : this.afs.collection('contacts');
 
-    this.contacts = this.contactsCollectionRef.snapshotChanges().map((changes => {
+    this.contacts = this.contactsCollectionRef.snapshotChanges().pipe(map((changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Contact;
         data.id = a.payload.doc.id;
         return data;
       });
-    }) as any);
+    }) as any));
     return this.contacts;
   }
 
@@ -34,7 +36,7 @@ export class ContactService {
   }
 
   updateContact(contact: Contact){
-    this.contactDoc = this.afs.doc(`contacts/${contact.id}`);
+    this.contactDoc = this.afs.doc('contacts/${contact.id}');
     this.contactDoc.update(contact);
   }
 }
