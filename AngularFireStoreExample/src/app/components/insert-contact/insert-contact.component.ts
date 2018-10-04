@@ -3,16 +3,17 @@ import { ContactService } from '../../services/contact.service';
 import { Contact } from '../..//models/Contact';
 
 @Component({
-  selector: 'app-update-component',
-  templateUrl: './update-component.component.html',
-  styleUrls: ['./update-component.component.css']
+  selector: 'app-insert-contact',
+  templateUrl: './insert-contact.component.html',
+  styleUrls: ['./insert-contact.component.css']
 })
-export class UpdateComponent implements OnInit {
+export class InsertContactComponent implements OnInit {
 
   constructor(private cs: ContactService) { }
 
   ngOnInit() {
     let c: Contact = {}
-    this.cs.updateContact(c);
+    this.cs.addContact(c);
   }
+
 }
