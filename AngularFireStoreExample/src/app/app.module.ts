@@ -17,6 +17,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ItemsViewComponent } from './components/items-view/items-view.component';
 import { QueriesComponent } from './components/queries/queries.component';
+import { UpdateComponent } from './components/update-component/update-component.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { QueriesComponent } from './components/queries/queries.component';
     NavbarComponent,
     AddItemComponent,
     ItemsViewComponent,
-    QueriesComponent
+    QueriesComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
