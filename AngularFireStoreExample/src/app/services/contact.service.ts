@@ -42,7 +42,7 @@ export class ContactService {
   }
 
   updateContact(contact: Contact){
-    this.contactDoc = this.afs.doc('contacts/${contact.id}');
+    this.contactDoc = this.afs.collection('contacts').doc(contact.id);
     this.contactDoc.update(contact);
   }
 }

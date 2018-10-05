@@ -8,11 +8,24 @@ import { Contact } from '../..//models/Contact';
   styleUrls: ['./update-component.component.css']
 })
 export class UpdateComponent implements OnInit {
+  public contact: Contact;
 
   constructor(private cs: ContactService) { }
 
   ngOnInit() {
-    let c: Contact = {}
-    this.cs.updateContact(c);
+    this.contact = {};
+  }
+
+  save() {
+    this.cs.updateContact(this.contact);
+  }
+
+  load() {
+    let query = ref => ref
+      .where('id', '==', this.contact.id)
+
+    this.cs.getContacts(query).subscribe(contacts => {
+      this.contact = contacts[0];
+    });
   }
 }
