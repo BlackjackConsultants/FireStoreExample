@@ -26,8 +26,14 @@ export class ContactService {
     return this.contacts;
   }
 
-  addContact(contact: Contact){
-    this.contactsCollectionRef.add(contact);
+  setContact(contact: Contact) {
+    debugger;
+    if (contact.id != null) {
+      throw new Error('The id must be 0 for new contact');
+    }
+    contact.id = this.afs.createId();
+    this.contactDoc = this.afs.collection('contacts').doc(contact.id);
+    this.contactDoc.set(contact);
   }
 
   deleteContact(contact: Contact){

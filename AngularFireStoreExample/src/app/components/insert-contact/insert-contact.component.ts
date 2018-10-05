@@ -8,12 +8,15 @@ import { Contact } from '../..//models/Contact';
   styleUrls: ['./insert-contact.component.css']
 })
 export class InsertContactComponent implements OnInit {
+  public contact: Contact;
 
   constructor(private cs: ContactService) { }
 
   ngOnInit() {
-    let c: Contact = {}
-    this.cs.addContact(c);
+    this.contact = {};
   }
 
+  save() {
+    this.cs.setContact(this.contact);
+  }
 }
