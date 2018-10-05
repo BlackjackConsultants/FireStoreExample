@@ -27,7 +27,6 @@ export class ContactService {
   }
 
   setContact(contact: Contact) {
-    debugger;
     if (contact.id != null) {
       throw new Error('The id must be 0 for new contact');
     }
